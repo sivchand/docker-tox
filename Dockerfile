@@ -9,7 +9,7 @@ RUN apt-get update -y && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends ca-certificates wget gosu && \
     rm -rf /var/lib/apt/lists /tmp/* /var/tmp/* 
 
-RUN pyenv local 3.8.13 && \
+RUN pyenv local 3.12.3 && \
     python -m pip install -U pip && \
     python -m pip install tox && \
     pyenv local --unset && \
